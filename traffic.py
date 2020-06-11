@@ -1,4 +1,3 @@
-print("importing")
 import cv2
 import numpy as np
 import os
@@ -26,7 +25,6 @@ def main():
         sys.exit("Usage: python traffic.py data_directory [model.h5]")
 
     # Get image arrays and labels for all image files
-    print("loading data")
     images, labels = load_data(sys.argv[1])
 
     # Split data into training and testing sets
@@ -36,15 +34,12 @@ def main():
     )
 
     # Get a compiled neural network
-    print("loading model")
     model = get_model()
 
     # Get model summary
-    print("Getting model summary")
     model.summary()
 
     # Fit model on training data
-    print("fitting")
     model.fit(
         x_train, y_train, 
         epochs=EPOCHS,
