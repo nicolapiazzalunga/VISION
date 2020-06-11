@@ -14,6 +14,7 @@ IMG_HEIGHT = 30
 NUM_CATEGORIES = 43
 TEST_SIZE = 0.4
 
+
 def lr_schedule(epoch):
     return 0.001 * (0.1 ** int(epoch / 10))
 
