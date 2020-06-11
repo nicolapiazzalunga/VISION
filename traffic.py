@@ -89,7 +89,7 @@ def load_data(data_dir):
             img = cv2.resize(img, dsize, interpolation=cv2.INTER_AREA)
 
             # Normalize data so that is included between 0 and 1
-            img = img/255.0
+            img = img / 255.0
 
             # Finish dataset
             images.append(img)
