@@ -19,7 +19,8 @@ def lr_schedule(epoch):
     """
     Sets the learning rate as a decreasing function of the epoch 
     """
-    return 0.001 * (0.1 ** int(epoch / 10))
+    learning_rate = 0.001 * (0.1 ** int(epoch / 10))
+    return learning_rate
 
 
 def main():
