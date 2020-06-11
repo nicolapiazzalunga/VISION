@@ -91,11 +91,6 @@ def load_data(data_dir):
             path = os.path.join(DIR, name)
             img = cv2.imread(path)
 
-            # # Histogram normalization in v channel
-            # hsv = color.rgb2hsv(img)
-            # hsv[:, :, 2] = exposure.equalize_hist(hsv[:, :, 2])
-            # img = color.hsv2rgb(hsv)
-
             # Resize the image
             dsize = (IMG_WIDTH, IMG_HEIGHT)
             img = cv2.resize(img, dsize, interpolation=cv2.INTER_AREA)
@@ -137,20 +132,6 @@ def get_model():
         Dropout(0.3),
         Dense(NUM_CATEGORIES, activation='softmax')
     ])
-
-    # # Add a hidden layer with n units, with ReLU activation
-    # n = NUM_CATEGORIES - 1
-    # model.add(tf.keras.layers.Dense(n, input_shape=input_shape, activation="relu"))
-
-    # # Flatten
-    # model.add(tf.keras.layers.Flatten())
-
-    # # Add an output layer with a number of units equal to NUM_CATEGORIES and sigmoid activaton
-    # m = NUM_CATEGORIES
-    # model.add(tf.keras.layers.Dense(m, activation="sigmoid"))
-
-    # # Finish with softmax
-    # model.add(tf.keras.layers.Softmax())
 
     # Compile model
     model.compile(
