@@ -41,9 +41,6 @@ def main():
     # Get a compiled neural network
     model = get_model()
 
-    # Get model summary
-    model.summary()
-
     # Fit model on training data
     model.fit(
         x_train, y_train, 
