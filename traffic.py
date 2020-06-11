@@ -55,7 +55,7 @@ def main():
         )
 
     # Evaluate neural network performance
-    model.evaluate(x_test,  y_test, verbose=2)
+    model.evaluate(x_test, y_test, verbose=2)
 
     # Save model to file
     if len(sys.argv) == 3:
