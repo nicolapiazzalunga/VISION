@@ -16,6 +16,9 @@ TEST_SIZE = 0.4
 
 
 def lr_schedule(epoch):
+    """
+    Sets the learning rate as a decreasing function of the epoch 
+    """
     return 0.001 * (0.1 ** int(epoch / 10))
 
 
