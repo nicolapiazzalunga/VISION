@@ -6,9 +6,7 @@ import sys
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Conv2D, Flatten, Dropout, MaxPooling2D, Softmax
-# from skimage import color, exposure, transform
 from tensorflow.keras.callbacks import LearningRateScheduler, ModelCheckpoint
-
 from sklearn.model_selection import train_test_split
 
 EPOCHS = 10
